@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reaction Time Test</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dark-mode">
+    <div class="container">
+        <h1>Reaction Time Test</h1>
+        
+        <div class="theme-toggle-container">
+            <button id="theme-toggle" class="theme-toggle">
+                <span class="theme-toggle-track">
+                    <span class="theme-toggle-thumb"></span>
+                </span>
+                <span class="theme-toggle-text">Light Mode</span>
+            </button>
+        </div>
+        
+        <div class="instructions">
+            <p>Wait for the box to turn green, then click as quickly as you can!</p>
+            <p>Click the box to start the test. Try 5 times to get your average reaction time.</p>
+        </div>
+        
+        <div class="game-area ready">
+            <div class="game-text">Click to start!</div>
+        </div>
+        
+        <button class="start-btn">Restart Test</button>
+        
+        <div class="results hidden">
+            <h2>Your Reaction Time</h2>
+            <div class="current-time">0 ms</div>
+            
+            <div class="time-stats">
+                <div class="stat">
+                    <div class="stat-value" id="best-time">0</div>
+                    <div class="stat-label">Best (ms)</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="average-time">0</div>
+                    <div class="stat-label">Average (ms)</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="attempts">0/5</div>
+                    <div class="stat-label">Attempts</div>
+                </div>
+            </div>
+            
+            <div class="reaction-history" id="reaction-history">
+                <!-- Reaction points will be added here -->
+            </div>
+        </div>
+    </div>
+    
+    <div class="calibration-overlay" id="calibration-overlay">
+        <div class="calibration-content">
+            <h2>System Calibration</h2>
+            <p>Please wait while we optimize the test for your device...</p>
+            <div class="calibration-progress">
+                <div class="calibration-bar" id="calibration-bar"></div>
+            </div>
+            <p id="calibration-message">This helps ensure accurate measurements</p>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
